@@ -1,0 +1,125 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@font-face {
+    font-family: "Inter";
+    src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+    font-weight: bold;
+}
+
+body {
+    padding: 10%;
+}
+
+
+.container {
+    display : grid;
+    grid-template-areas: 
+    "header header"
+    "main-banner side-news"
+    "footer footer";
+
+    grid-template-columns: 2fr 1fr;
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 1%;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+.footer-news {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+}
+
+.footer-news img {
+    margin-top: 5%;
+}
+
+.footer-news h1 {
+    color:hsl(5, 85%, 63%);
+    font-size: 50px;
+    line-height: 10px;
+}
+
+.footer-news p {
+    font-size: 23px;
+    font-weight: bold;    
+}
+
+.main-banner {
+    grid-area: main-banner;
+    display: grid;
+    grid-template-areas: 
+    "img img"
+    "sub-title content";
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.7fr 0.5fr;
+    grid-auto-rows: minmax(100px, auto);
+    gap : 20px;
+}
+
+
+.main-banner img {
+    width: 100%;
+
+    grid-area: img;
+}
+
+.sub-title {
+    grid-area: sub-title;
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-rows: 1fr 0.7fr;
+}
+
+.content span {
+    font-size: 22px;
+}
+
+.content input {
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid black;
+    background-color: hsl(5, 85%, 63%);
+    padding: 3% 10%;
+}
+
+article {
+    grid-area: side-news;
+    background-color: hsl(240, 100%, 5%);
+    color:white;
+    padding: 5%;
+    
+    display: grid; 
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+}
+
+article h3 {
+    font-size:xx-large;
+
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.menu span {
+    line-height: 200px;
+}
